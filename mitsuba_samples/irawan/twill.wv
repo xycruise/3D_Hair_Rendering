@@ -1,0 +1,230 @@
+/* Weave pattern data by Piti Irawan
+   Redistributed with permission */
+
+weave {
+  name = "Cotton twill",
+
+  /* Tile size of the weave pattern */
+  tileWidth = 4,
+  tileHeight = 8,
+
+  /* Uniform and forward scattering parameters */
+  alpha = 0.01,
+  beta = 4,
+
+  /* Filament smoothing */
+  ss = 0,
+
+  /* Highlight width */
+  hWidth = 0.5,
+
+  /* Combined warp/weft size */
+  warpArea = 6,
+  weftArea = 2,
+
+  /* Noise-related parameters */
+  fineness = 4,
+
+  /* Weave pattern description */
+  pattern {
+    7, 2, 4, 6, 
+	7, 2, 4, 6, 
+	1, 8, 4, 6, 
+	1, 8, 4, 6, 
+	1, 3, 9, 6, 
+	1, 3, 9, 6, 
+	1, 3, 5, 10, 
+	1, 3, 5, 10
+  },
+
+  /* Listing of all used yarns */
+  yarn {
+    type = warp,
+    /* Fiber twist angle */
+    psi = -30,
+    /* Maximum inclination angle */
+    umax = 24,
+    /* Spine curvature */
+    kappa = 0,
+    /* Width and length of the segment rectangle */
+    width = 1,
+    length = 6,
+    /* Yarn segment center in tile space */
+    centerU = 0.125,
+    centerV = 0.375,
+	/* Diffuse and specular color */
+	kd = $kd,
+	ks = $ks
+  },
+
+  yarn {
+    type = warp,
+    /* Fiber twist angle */
+    psi = -30,
+    /* Maximum inclination angle */
+    umax = 24,
+    /* Spine curvature */
+    kappa = 0,
+    /* Width and length of the segment rectangle */
+    width = 1,
+    length = 6,
+    /* Yarn segment center in tile space */
+    centerU = 0.375,
+    centerV = 1.125,
+	/* Diffuse and specular color */
+	kd = $kd,
+	ks = $ks
+  },
+
+  yarn {
+    type = warp,
+    /* Fiber twist angle */
+    psi = -30,
+    /* Maximum inclination angle */
+    umax = 24,
+    /* Spine curvature */
+    kappa = 0,
+    /* Width and length of the segment rectangle */
+    width = 1,
+    length = 6,
+    /* Yarn segment center in tile space */
+    centerU = 0.375,
+    centerV = 0.125,
+	/* Diffuse and specular color */
+	kd = $kd,
+	ks = $ks
+  },
+
+  yarn {
+    type = warp,
+    /* Fiber twist angle */
+    psi = -30,
+    /* Maximum inclination angle */
+    umax = 24,
+    /* Spine curvature */
+    kappa = 0,
+    /* Width and length of the segment rectangle */
+    width = 1,
+    length = 6,
+    /* Yarn segment center in tile space */
+    centerU = 0.625,
+    centerV = 0.875,
+	/* Diffuse and specular color */
+	kd = $kd,
+	ks = $ks
+  },
+
+  yarn {
+    type = warp,
+    /* Fiber twist angle */
+    psi = -30,
+    /* Maximum inclination angle */
+    umax = 24,
+    /* Spine curvature */
+    kappa = 0,
+    /* Width and length of the segment rectangle */
+    width = 1,
+    length = 6,
+    /* Yarn segment center in tile space */
+    centerU = 0.625,
+    centerV = -0.125,
+	/* Diffuse and specular color */
+	kd = $kd,
+	ks = $ks
+  },
+
+  yarn {
+    type = warp,
+    /* Fiber twist angle */
+    psi = -30,
+    /* Maximum inclination angle */
+    umax = 24,
+    /* Spine curvature */
+    kappa = 0,
+    /* Width and length of the segment rectangle */
+    width = 1,
+    length = 6,
+    /* Yarn segment center in tile space */
+    centerU = 0.875,
+    centerV = 0.625,
+	/* Diffuse and specular color */
+	kd = $kd,
+	ks = $ks
+  },
+
+  yarn {
+    type = weft,
+    /* Fiber twist angle */
+    psi = -30,
+    /* Maximum inclination angle */
+    umax = 36,
+    /* Spine curvature */
+    kappa = 0,
+    /* Width and length of the segment rectangle */
+    width = 2,
+    length = 1,
+    /* Yarn segment center in tile space */
+    centerU = 0.125,
+    centerV = 0.875,
+	/* Diffuse and specular color */
+	kd = $kd,
+	ks = $ks
+  },
+
+  yarn {
+    type = weft,
+    /* Fiber twist angle */
+    psi = -30,
+    /* Maximum inclination angle */
+    umax = 36,
+    /* Spine curvature */
+    kappa = 0,
+    /* Width and length of the segment rectangle */
+    width = 2,
+    length = 1,
+    /* Yarn segment center in tile space */
+    centerU = 0.375,
+    centerV = 0.625,
+	/* Diffuse and specular color */
+	kd = $kd,
+	ks = $ks
+  },
+
+  yarn {
+    type = weft,
+    /* Fiber twist angle */
+    psi = -30,
+    /* Maximum inclination angle */
+    umax = 36,
+    /* Spine curvature */
+    kappa = 0,
+    /* Width and length of the segment rectangle */
+    width = 2,
+    length = 1,
+    /* Yarn segment center in tile space */
+    centerU = 0.625,
+    centerV = 0.375,
+	/* Diffuse and specular color */
+	kd = $kd,
+	ks = $ks
+  },
+
+  yarn {
+    type = weft,
+    /* Fiber twist angle */
+    psi = -30,
+    /* Maximum inclination angle */
+    umax = 36,
+    /* Spine curvature */
+    kappa = 0,
+    /* Width and length of the segment rectangle */
+    width = 2,
+    length = 1,
+    /* Yarn segment center in tile space */
+    centerU = 0.875,
+    centerV = 0.125,
+	/* Diffuse and specular color */
+	kd = $kd,
+	ks = $ks
+  }
+}

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--MDL to mitsuba converter. Wed Apr 20 03:07:16 CEST 2011.-->
+<scene version="0.3.0">
+	<bsdf type="irawan" id="cloth">
+		<string name="filename" value="polyester.wv"/>
+		<float name="kdMultiplier" value="0.00153"/>
+		<float name="ksMultiplier" value="0.5459"/>
+		<float name="repeatU" value="225.0"/>
+		<float name="repeatV" value="225.0"/>
+		<!-- Parameters to the weave pattern file -->
+		<rgb name="kd" value="1, 0.145098, 0.0745098"/>
+		<rgb name="ks" value="1, 0.533333, 0.490196"/>
+	</bsdf>
+
+	<luminaire type="point" id="light 0">
+		<rgb name="intensity" value="25.000000, 25.000000, 25.000000"/>
+		<transform name="toWorld">
+			<translate x="0.299707" y="-0.312531" z="0.25"/>
+		</transform>
+	</luminaire>
+
+	<shape type="serialized" id="turntable">
+		<string name="filename" value="meshes/turntable.serialized"/>
+
+		<ref id="cloth"/>
+	</shape>
+
+	<camera type="perspective" id="camera_0">
+		<transform name="toWorld">
+			<scale x="-1"/>
+			<lookAt origin="0.868995, -0.016711, 0.258935" target="-0.0969089, 0.005678, 0.00100404" up="-0.257885, 0.004963, 0.966163"/>
+		</transform>
+		<float name="fov" value="5.4"/>
+
+		<sampler type="ldsampler">
+			<integer name="depth" value="4"/>
+			<integer name="sampleCount" value="32"/>
+		</sampler>
+
+		<film type="exrfilm">
+			<integer name="width" value="876"/>
+			<integer name="height" value="584"/>
+			<boolean name="banner" value="false"/>
+
+			<rfilter type="gaussian"/>
+		</film>
+	</camera>
+
+	<integrator type="direct"/>
+</scene>

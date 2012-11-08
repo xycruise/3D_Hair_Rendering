@@ -1,0 +1,106 @@
+/* Weave pattern data by Piti Irawan
+   Redistributed with permission */
+
+weave {
+  name = "Polyester lining cloth",
+
+  /* Tile size of the weave pattern */
+  tileWidth = 2,
+  tileHeight = 2,
+
+  /* Uniform and forward scattering parameters */
+  alpha = 0.015,
+  beta = 4,
+
+  /* Filament smoothing */
+  ss = 0.5,
+
+  /* Highlight width */
+  hWidth = 0.5,
+
+  /* Combined warp/weft size */
+  warpArea = 1,
+  weftArea = 1,
+
+  /* Noise-related parameters */
+  dWarpUmaxOverDWarp = 8,
+  dWarpUmaxOverDWeft = 8,
+  dWeftUmaxOverDWarp = 6,
+  dWeftUmaxOverDWeft = 6,
+  period = 50,
+
+  /* Weave pattern description */
+  pattern {
+    3, 2,
+	1, 4
+  },
+
+  /* Listing of all used yarns */
+  yarn {
+    type = warp,
+    /* Maximum inclination angle */
+    umax = 22,
+    /* Spine curvature */
+    kappa = -0.7,
+    /* Width and length of the segment rectangle */
+    width = 1,
+    length = 1,
+    /* Yarn segment center in tile space */
+    centerU = 0.25,
+    centerV = 0.25,
+	/* Diffuse and specular color */
+	kd = $kd,
+	ks = $ks
+  },
+
+  yarn {
+    type = warp,
+    /* Maximum inclination angle */
+    umax = 22,
+    /* Spine curvature */
+    kappa = -0.7,
+    /* Width and length of the segment rectangle */
+    width = 1,
+    length = 1,
+    /* Yarn segment center in tile space */
+    centerU = 0.75,
+    centerV = 0.75,
+	/* Diffuse and specular color */
+	kd = $kd,
+	ks = $ks
+  },
+
+  yarn {
+    type = weft,
+    /* Maximum inclination angle */
+    umax = 16,
+    /* Spine curvature */
+    kappa = -0.7,
+    /* Width and length of the segment rectangle */
+    width = 1,
+    length = 1,
+    /* Yarn segment center in tile space */
+    centerU = 0.25,
+    centerV = 0.75,
+	/* Diffuse and specular color */
+	kd = $kd,
+	ks = $ks
+  },
+
+  yarn {
+    type = weft,
+    /* Maximum inclination angle */
+    umax = 16,
+    /* Spine curvature */
+    kappa = -0.7,
+    /* Width and length of the segment rectangle */
+    width = 1,
+    length = 1,
+    /* Yarn segment center in tile space */
+    centerU = 0.75,
+    centerV = 0.25,
+	/* Diffuse and specular color */
+	kd = $kd,
+	ks = $ks
+  }
+}

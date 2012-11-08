@@ -1,0 +1,9 @@
+Setup Steps:
+1. Install Python 2.6.6 from $\tools\python-2.6.6.amd64.msi
+2. Install scons 2.2.0 by running "python setup.py" within the source release of SCons ($\tools\scons-2.2.0).
+3. Build Qt 4.7.4 from source code.
+    $\qt-src-4.7.4>configure.exe -release -no-webkit -no-phonon -no-phonon-backend -no-script -no-scripttools -no-qt3support -no-multimedia -no-ltcg
+    ..(configuration messages)..
+    $\qt-src-4.7.4>nmake
+4. Select build configuration according to platform. Copy the configuration from $\mitsuba\build to $\misuba and rename the file to config.py
+5. Build the project in command line: $\mitsuba\scons or from visual studio project: $\mitsuba\build\mitsuba-msvc2010.sln
